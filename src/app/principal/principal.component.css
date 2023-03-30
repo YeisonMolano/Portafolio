@@ -1,0 +1,161 @@
+.tittle{
+    color: yellow;
+    font-family: inherit;
+    font-size: xxx-large;
+    text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em
+}
+
+.subTittle{
+    color: yellow;
+    font-family: inherit;
+    font-size: x-large;
+    text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em;
+    text-align: center;
+}
+
+p{
+    color: aliceblue;
+    text-align: start;
+}
+
+:host ::ng-deep .p-button.contact{
+    background-color: #ffffff00;
+    border-color: #eaff00;
+}
+
+:host ::ng-deep .p-button.contact:hover{
+    background-color: #eaff00;
+    border-color: black;
+    color: black;
+}
+
+.palabra{
+    margin-right: 8px;
+    font-family: Cambria;
+    font-weight: 1000;
+}
+
+.letra:hover{
+    color: #eaff00;
+    font-size: 55px;
+}
+
+.textos{
+    font-size: larger;
+}
+
+:host ::ng-deep .p-card{
+    background-color: rgb(58, 55, 81);
+}
+
+a{
+    text-decoration: none;
+}
+
+.skil:hover{
+    transform: scale(1.15);
+}
+
+.imgPrincipal{
+    border-radius: 300px; 
+    width: 50%; 
+    opacity: 0.8
+}
+
+.imgLogo{
+    width: 110px; 
+    height: 110px;
+}
+
+.inputMessage{
+    width: 100%;
+}
+
+@media screen and (max-width: 885px){
+    .tittle{
+        font-size: xx-large;
+    }
+
+    .imgPrincipal{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 607px){
+    .tittle{
+        font-size: large;
+    }
+
+    .letra:hover{
+        color: #eaff00;
+        font-size: 40px;
+    }
+
+    .imgPrincipal{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .tittle{
+        color: yellow;
+        font-family: inherit;
+        font-size: 14px;
+        text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em;
+        width: 90%;
+        text-align: center;
+    }
+
+    .textos{
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .imgLogo{
+        width: 50px; height: 50px
+    }
+
+    .pequenio{
+        display: flex;
+        justify-content: center;
+    }
+
+    :host ::ng-deep .p-button .p-button-label{
+        font-size: 5px;
+    }
+
+    :host ::ng-deep .pi{
+        font-size: .5rem;
+    }
+
+    .letra:hover{
+        color: #eaff00;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 166px){
+    .tittle{
+        font-size: 5px;
+    }
+
+    .letra:hover{
+        color: #eaff00;
+        font-size: 12px;
+    }
+
+    :host ::ng-deep .p-button.contact{
+        width: 100%;
+        height: 5px;
+    }
+
+    .textos{
+        text-align: justify;   
+    }
+
+    .inputMessage{
+        height: 10px;
+        font-size: 8px;
+        padding: 6px;
+    }
+}
