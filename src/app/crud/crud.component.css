@@ -1,0 +1,212 @@
+:host ::ng-deep .p-button.contact{
+    background-color: #ffffff00;
+    border-color: #eaff00;
+}
+
+:host ::ng-deep .p-button.contact:hover{
+    background-color: #eaff00;
+    border-color: black;
+    color: black;
+}
+
+:host ::ng-deep .p-button.newP{
+    background-color: #ffffff00;
+    border-color: #eaff00;
+    width: 7rem;
+    height: 2rem;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-content:last-of-type{
+    background-color: black;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: #eaff00;
+}
+
+:host ::ng-deep .p-dialog-draggable .p-dialog-header{
+    background-color: black;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    border-color: #eaff00;
+    color: aliceblue;
+}
+
+.p-inputgroup-addon:last-child, .p-inputgroup button:last-child, .p-inputgroup input:last-child, .p-inputgroup > .p-inputwrapper:last-child > .p-component, .p-inputgroup > .p-inputwrapper:last-child > .p-component > .p-inputtext{
+    background: inherit;
+    color: aliceblue;
+}
+
+.dialog{
+    width: 60vw;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0px;
+}
+
+th, td {
+    table-layout: fixed;
+    border: 1px solid rgb(111, 111, 112);
+    width: 100%;
+    word-wrap: break-word;
+    color: aliceblue;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+th{
+    background-color: #484e54;
+    height: 40px;
+}
+
+:host ::ng-deep .p-toast-message-content{
+    width: 140px;
+    font-size: 10px;
+}
+
+:host ::ng-deep .p-toast-icon{
+    width: .5rem;
+}
+
+.explicacion{
+    color: aliceblue;
+}
+
+@media screen and (max-width: 993px) {
+    table{
+        table-layout: fixed;
+    }
+    
+    th, td {
+        border: 1px solid rgb(112, 112, 122);
+        width: 100%;
+        word-wrap: break-word;
+        color: aliceblue;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    table{
+        table-layout: fixed;
+    }
+    
+    th, td {
+        border: 1px solid rgb(111, 111, 112);
+        width: 100%;
+        word-wrap: break-word;
+        color: aliceblue;
+        font-size: 15px;
+        border-spacing: 0px;
+        text-align: center;
+    }
+
+    .explicacion{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .prueba{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .up{
+        display: flex;
+        order: 1;
+        
+    }
+
+    .down{
+        display: flex;
+        order: 2;
+    }
+
+    table{
+        table-layout: fixed;
+    }
+    
+    th, td {
+        border: 1px solid rgb(111, 111, 112);
+        width: 100%;
+        word-wrap: break-word;
+        color: aliceblue;
+        font-size: 10px;
+        border-spacing: 0px;
+        text-align: center;
+    }
+
+    .explicacion{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 166px) {
+    .prueba{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .up{
+        order: 1;
+    }
+
+    .down{
+        order: 2;
+    }
+
+    table{
+        table-layout: fixed;
+    }
+    
+    th, td {
+        border: 1px solid rgb(111, 111, 112);
+        width: 100%;
+        word-wrap: break-word;
+        color: aliceblue;
+        font-size: 4px;
+        border-spacing: 0px;
+        text-align: center;
+    }
+
+    :host ::ng-deep .p-button.contact{
+        width: 100%;
+        height: 3px;
+        margin-bottom: 10px;
+        font-size: 5px;
+        padding: 10px;
+    }
+
+    :host ::ng-deep .pi{
+        font-size: .5rem;
+    }
+
+    :host ::ng-deep .p-button.p-button-icon-only{
+        width: 1.2rem;
+    }
+
+    th{
+        height: 10px;
+    }
+
+    td{
+        height: 10px;
+    }
+
+    :host ::ng-deep .p-button.p-button-icon-only.p-button-rounded{
+        height: .5rem;
+        width: 1.4rem;
+    }
+
+    .explicacion{
+        font-size: 7px;
+    }
+}

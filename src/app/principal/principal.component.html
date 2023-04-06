@@ -1,42 +1,81 @@
-<section
-  id="start"
-  data-aos="fade-up"
-  data-aos-duration="2000"
->
-<app-header></app-header>
+<section id="start" data-aos="fade-up" data-aos-duration="2000">
+  <app-header></app-header>
   <div>
-    <div class="">
-      <h1 class="tittle"><b><span><span class="palabra"><span class="letra">F</span><span class="letra">U</span><span class="letra">L</span><span class="letra">L</span><span class="letra">S</span><span class="letra">T</span><span class="letra">A</span>
-        <span class="letra">C</span><span class="letra">K</span></span> 
-        <span class="palabra"><span class="letra">J</span><span class="letra">A</span><span class="letra">V</span><span class="letra">A</span></span> 
-        <span class="palabra"><span class="letra">A</span><span class="letra">N</span><span class="letra">G</span><span class="letra">U</span><span class="letra">L</span><span class="letra">A</span><span class="letra">R</span></span> 
-        <span class="palabra"><span class="letra">D</span><span class="letra">E</span><span class="letra">V</span><span class="letra">E</span><span class="letra">L</span><span class="letra">O</span><span class="letra">P</span><span class="letra">E</span><span class="letra">R</span></span></span></b></h1>
+    <div>
+      <h1 class="tittle">
+        <b
+          ><span
+            ><span class="palabra"
+              ><span class="letra">F</span><span class="letra">U</span
+              ><span class="letra">L</span><span class="letra">L</span
+              ><span class="letra">S</span><span class="letra">T</span
+              ><span class="letra">A</span> <span class="letra">C</span
+              ><span class="letra">K</span></span
+            >
+            <span class="palabra"
+              ><span class="letra">J</span><span class="letra">A</span
+              ><span class="letra">V</span><span class="letra">A</span></span
+            >
+            <span class="palabra"
+              ><span class="letra">A</span><span class="letra">N</span
+              ><span class="letra">G</span><span class="letra">U</span
+              ><span class="letra">L</span><span class="letra">A</span
+              ><span class="letra">R</span></span
+            >
+            <span class="palabra"
+              ><span class="letra">D</span><span class="letra">E</span
+              ><span class="letra">V</span><span class="letra">E</span
+              ><span class="letra">L</span><span class="letra">O</span
+              ><span class="letra">P</span><span class="letra">E</span
+              ><span class="letra">R</span></span
+            ></span
+          ></b
+        >
+      </h1>
     </div>
     <br />
     <div class="p-grid">
       <div
-        class="p-lg-6 p-md-6 p-sm-12 p-text-sm-center"
-        style="color: white; font-size: 20px"
+        class="p-lg-6 p-md-6 p-sm-12 p-text-sm-center textos"
       >
-      <div class="p-sm-12">
-        <h5 class="textos"> <b>Hola!</b> Me conocen como Yeison Molano. <br><br>Me desempeño en el area del desarrollo web, mis capacidades son 
-          el diseño, desarrollo e implementacion de aplicaciones FullStack</h5>
-          <div class="pequenio">
-          <a href="#contact-me"><p-button label="Contactame" styleClass="contact" icon="pi pi-envelope"></p-button></a>
+        <div class="p-sm-12">
+          <h5 class="textos">
+            <b>Hola!</b> Me conocen como Yeison Molano. <br /><br />Me desempeño
+            en el area del desarrollo web, mis capacidades son el diseño,
+            desarrollo e implementacion de aplicaciones FullStack, en el siguiente
+            boton encontraras un link en donde vas a poder interactuar con un crud
+            realizado con SpringBoot y Mysql.
+          </h5>
+          <div class="p-d-flex p-jc-around">
+            <div class="pequenio">
+              <a routerLink="/crud"
+                ><p-button
+                  label="CRUD Basico"
+                  styleClass="contact"
+                  icon="pi pi-envelope"
+                ></p-button
+              ></a>
+            </div>
+            <div class="pequenio">
+              <a href="#contact-me"
+                ><p-button
+                  label="Contactame"
+                  styleClass="contact"
+                  icon="pi pi-envelope"
+                ></p-button
+              ></a>
+            </div>
           </div>
-      </div>
+        </div>
       </div>
       <div class="p-lg-6 p-md-6 p-sm-12 p-d-flex p-jc-center">
-        <img
-          src="./assets/imagenes/mio.jpg"
-          class="imgPrincipal"
-        />
+        <img src="./assets/imagenes/mio.jpg" class="imgPrincipal" />
       </div>
     </div>
   </div>
 </section>
 
-<section id="skills" data-aos="fade-right" data-aos-duration="1500" (mousemove)="onMouseMove($event)">
+<section id="skills" data-aos="fade-right" data-aos-duration="1500">
   <div>
     <h1 class="tittle">HABILIDADES</h1>
 
@@ -48,21 +87,18 @@
       <div
         *ngFor="let skill of front"
         class="p-lg-3 p-sm-6 p-mb-sm-6 skil"
-        style="text-align: center"
         data-aos="flip-left"
         data-aos-duration="800"
       >
-        <h1 style="color: white">{{ skill.nombreSkil }}</h1>
-        <div class="p-d-flex">
+        <h1 class="textos">{{ skill.nombreSkil }}</h1>
+        <div class="p-d-flex centrar">
           <div class="p-lg-6">
-            <img
-              src="{{ skill.logo }}"
-              class="imgLogo"
-            />
+            <img src="{{ skill.logo }}" class="imgLogo" />
           </div>
           <div class="p-lg-6">
-            <p class="textos">Años de experciencia: {{skill.experiencia}} <br>
-              Tipo de habilidad: {{skill.tipo}}
+            <p class="textos">
+              Años de experciencia: {{ skill.experiencia }} <br />
+              Tipo de habilidad: {{ skill.tipo }}
             </p>
           </div>
         </div>
@@ -77,22 +113,18 @@
       <div
         *ngFor="let skill of back"
         class="p-lg-4 p-sm-6 p-mb-6 skil"
-        style="text-align: center"
         data-aos="flip-left"
         data-aos-duration="800"
       >
-        <h1 style="color: white">{{ skill.nombreSkil }}</h1>
-        <div class="p-d-flex">
+        <h1 class="textos">{{ skill.nombreSkil }}</h1>
+        <div class="p-d-flex centrar">
           <div class="p-lg-6">
-            <img
-            src="{{ skill.logo }}"
-            alt=""
-            class="imgLogo"
-          />
+            <img src="{{ skill.logo }}" alt="" class="imgLogo" />
           </div>
           <div class="p-lg-6">
-            <p class="textos"><b>Años de experciencia:</b> {{ skill.experiencia }} <br>
-              <b>Tipo de habilidad:</b> {{skill.tipo}}
+            <p class="textos">
+              <b>Años de experciencia:</b> {{ skill.experiencia }} <br />
+              <b>Tipo de habilidad:</b> {{ skill.tipo }}
             </p>
           </div>
         </div>
@@ -102,42 +134,87 @@
 </section>
 
 <section id="contact-me">
-  
   <div class="p-d-lg-flex p-jc-center">
-    <div style="border-style: dashed;" class="p-sm-12 p-md-12 p-lg-6 p-pl-lg-6 p-pr-lg-6" data-aos="flip-left" data-aos-duration="2000">
+    <div
+      class="p-sm-12 p-md-12 p-lg-6 p-pl-lg-6 p-pr-lg-6"
+      data-aos="flip-left"
+      data-aos-duration="2000"
+    >
       <h1 class="tittle">Sobre mi</h1>
       <p class="textos">
-        Técnico en Sistemas y actual estudiante de penúltimo semestre de Ingeniería
-        de Sistemas, con experiencia en desarrollo de aplicaciones web propias
-        consumiendo microservicios utilizando Java para el Backend con SpringBoot,
-        para la parte del FrontEnd manejo de Angular y diseño de bases de datos
-        relaciones MySQL. Me desempeño por mi gran perseverancia, trabajo en equipo
-        y disciplina, además de un gran gusto por la programación.
+        Técnico en Sistemas y actual estudiante de penúltimo semestre de
+        Ingeniería de Sistemas, con experiencia en desarrollo de aplicaciones
+        web propias consumiendo microservicios utilizando Java para el Backend
+        con SpringBoot, para la parte del FrontEnd manejo de Angular y diseño de
+        bases de datos relaciones MySQL. Me desempeño por mi gran perseverancia,
+        trabajo en equipo y disciplina, además de un gran gusto por la
+        programación.
       </p>
     </div>
-    <div class="p-sm-12 p-md-12 p-lg-6" data-aos="flip-right" data-aos-duration="2000">
+    <div
+      class="p-sm-12 p-md-12 p-lg-6"
+      data-aos="flip-right"
+      data-aos-duration="2000"
+    >
       <h1 class="tittle">¡Contactame!</h1>
-      <div class="p-card p-p-2">
+      <div class="p-card p-p-lg-3 p-p-md-3 p-p-lg-2">
         <form action="" [formGroup]="formContactMe">
-          <div class="p-d-lg-flex">
-            <div class="p-lg-6 p-p-sm-0">
-              <input class="p-p-lg-2 inputMessage" placeholder="Nombre *" type="text" pInputText formControlName="nombre"/>
+          <div class="p-d-lg-flex p-d-md-flex p-d-sm-block">
+            <div class="p-lg-6 p-md-6 p-sm-12 p-col-12">
+              <input
+                class="p-p-2 inputMessage"
+                placeholder="Nombre *"
+                type="text"
+                pInputText
+                formControlName="nombre"
+              />
             </div>
-            <div class="p-lg-6 p-p-sm-0">
-              <input class="p-p-lg-2 inputMessage" type="text" placeholder="Apellido" pInputText formControlName="apellido"/>
+            <div class="p-lg-6 p-md-6 p-sm-12 p-col-12">
+              <input
+                class="p-p-2 inputMessage"
+                type="text"
+                placeholder="Apellido"
+                pInputText
+                formControlName="apellido"
+              />
             </div>
           </div>
-          <div class="p-lg-12 p-p-sm-0">
-            <input placeholder="Tema *" class="p-p-lg-2 inputMessage" type="text" pInputText formControlName="tema"/>
+          <div class="p-col-12">
+            <input
+              placeholder="Tema *"
+              class="p-p-2 inputMessage"
+              type="text"
+              pInputText
+              formControlName="tema"
+            />
           </div>
-          <div class="p-lg-12 p-p-sm-0">
-            <input placeholder="Contacto" class="p-p-lg-2 inputMessage" type="text" pInputText formControlName="contacto"/>
+          <div class="p-col-12">
+            <input
+              placeholder="Contacto"
+              class="p-p-2 inputMessage"
+              type="text"
+              pInputText
+              formControlName="contacto"
+            />
           </div>
-          <div class="p-lg-12 p-p-sm-0">
-            <textarea rows="5" cols="30" placeholder="Mensaje *" pInputTextarea [autoResize]="true" formControlName="mensaje" class="inputMessage"></textarea>
+          <div class="p-col-12">
+            <textarea
+              rows="5"
+              cols="30"
+              placeholder="Mensaje *"
+              pInputTextarea
+              [autoResize]="true"
+              formControlName="mensaje"
+              class="p-p-2 inputMessage"
+            ></textarea>
           </div>
-          <div class="p-d-flex p-jc-end">
-            <p-button label="Contactame" styleClass="contact" icon="pi pi-envelope" (onClick)="sendMail()"></p-button>
+          <div class="p-d-flex p-jc-end p-pr-2">
+            <p-button
+              label="Contactame"
+              styleClass="contact"
+              icon="pi pi-envelope"
+              (onClick)="sendMail()"
+            ></p-button>
           </div>
         </form>
       </div>
@@ -145,4 +222,4 @@
   </div>
 </section>
 
-
+<p-toast></p-toast>

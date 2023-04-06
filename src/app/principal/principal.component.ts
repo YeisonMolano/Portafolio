@@ -4,6 +4,7 @@ import * as AOS from 'aos';
 import { MailService } from '../service/mail.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Mail } from '../modells/mail';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-principal',
@@ -16,7 +17,7 @@ export class PrincipalComponent implements OnInit {
   name : string
   formContactMe: FormGroup
 
-  constructor(private mService: MailService, private fb : FormBuilder) {
+  constructor(private mService: MailService, private fb : FormBuilder, private message: MessageService) {
     this.front = new Array<Skill>()
     this.back = new Array<Skill>()
     this.name = ''
@@ -45,26 +46,20 @@ export class PrincipalComponent implements OnInit {
     )
   }
 
-  onMouseMove(event: MouseEvent) {
-    console.log('Mouse moved', event.clientX, event.clientY);
-    // Aquí puedes agregar las acciones que desees realizar cuando se detecta el movimiento del mouse
-  }
-
   sendMail(){
     if(this.formContactMe.valid){
       let mail = new Mail()
       mail.from = ''
       mail.to = ''
       mail.subject = this.formContactMe.get('tema')?.value 
-      mail.body = this.formContactMe.get('mensaje')?.value + '\nSoy ' + this.formContactMe.get('nombre')?.value + ' ' + this.formContactMe.get('apellido')?.value
+      mail.body = this.formContactMe.get('mensaje')?.value + '\nSoy ' + this.formContactMe.get('nombre')?.value + ' ' + this.formContactMe.get('apellido')?.value + '\nMi contacto es: ' + this.formContactMe.get('contacto')
       this.mService.sendMail(mail).subscribe(res =>{
         console.log('Se ha enviado el mensaje');
         this.formContactMe.reset()
       })
       
     }else{
-      console.log('Invalido');
-      
+      this.message.add({ severity: 'warn', summary: 'Datos invalidos', detail: 'Por favor digite ingrese al menos los datos que estas referenciados con *' });
     }
   }
 }
